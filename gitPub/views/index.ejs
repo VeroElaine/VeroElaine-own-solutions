@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style type="text/css">
+            body {
+                background-image: linear-gradient(white, orange);
+                width: 100vw;
+                height: auto;
+                color: black;
+                text-align: center;
+            }
+            h1{
+                font-size: 60px;
+                text-shadow: 2px 2px orange;
+            }
+            h2{
+                text-shadow: 2px 2px orange;
+
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                text-transform: capitalize;
+                font-weight: bold;
+
+            }
+            a:hover{
+                color: white;
+                text-shadow: 2px 2px #fd6a02;
+                font-size: 25px;
+            }
+            li{
+                list-style-type: none;
+                padding-top: 2.5%;
+            }
+            ul{
+                margin-top: 4%;
+                margin-bottom: 10%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to gitPub!</h1>
+        <h2>Halloween Drink Specials:</h2>
+        <ul>
+            <% for(let i = 0; i < allDrinks.length; i ++){%>
+            <li>
+                <a href="/drinks/<%=i%>">
+                    <%=allDrinks[i].name%>
+                </a>
+            </li>
+            <%} %>
+        </ul>
+        <h2>Halloween Food Specials:</h2>
+        <ul>
+            <% for(let i = 0; i < allFood.length; i ++){%>
+            <li>
+                <a href="/food/<%=i%>">
+                <%=allFood[i].name%>
+                </a>
+            </li>
+            <%} %>
+
+    </body>
+</html>

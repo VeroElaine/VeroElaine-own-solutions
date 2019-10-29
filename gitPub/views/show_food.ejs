@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style type="text/css">
+            body {
+                background-image: linear-gradient(white, orange);
+                background-repeat: no-repeat;
+                width: 100vw;
+                height: 100vh;
+                color: black;
+                text-align: center;
+                text-transform: capitalize;
+            }
+            h1{
+                font-size: 60px;
+                text-shadow: 2px 2px orange;
+
+            }
+            h2{
+                text-shadow: 2px 2px orange;
+                color: black;
+
+            }
+            h3{
+                color: white;
+                text-shadow: 2px 2px #fd6a02;
+                font-size: 20px;
+
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                text-transform: capitalize;
+                font-weight: bold;
+                text-shadow: 2px 2px #fd6a02;
+                font-size: 20px;
+
+
+            }
+            a:hover{
+                font-size: 25px;
+            }
+            li{
+                list-style-type: none;
+                padding-top: 2.5%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>At foo bar</h1>
+        <h2><%=food.name%></h2>
+        <img src= "<%=food.image%>.png" width="60%" height="60%">
+        <h3> price: $<%=food.price%> </h3>
+        <a href="/drinks">Back to Food Menu</a>
+
+
+    </body>
+</html>
