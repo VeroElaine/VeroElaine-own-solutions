@@ -1,0 +1,20 @@
+body {
+    background-color: #F8F7FF;
+    text-align: center;
+
+}
+
+/* Would like to take the line spacing out between thead and td */
+thead, td, th {
+    border: 2px solid hotpink;
+}
+
+table {
+    display: flex;
+    justify-content: center
+
+}
+
+li.cabbage {
+    color: chartreuse;
+}
