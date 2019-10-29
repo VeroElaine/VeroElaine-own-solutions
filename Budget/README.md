@@ -1,4 +1,3 @@
-[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
 
 # Budgtr
 
@@ -219,7 +218,7 @@ Remember, this is just JavaScript, so you can write as much JS logic as you want
 ## Hungry for More
 
 <details><summary>Click to see HFM options</summary><p>
-   
+
    Feel free to choose what you want and if you want to implement something differently than the suggestion, go for it! It is hungry for more time!
 
 
