@@ -1,244 +1,222 @@
 [![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
 
-# Budgtr
+# First Express Homework
 
-Build an express app that let's you create, and read
+Practice the Basics of Express
 
 #### Learning Objectives
 
-- Practice building an express app
-- Practice making an index route
-- Practice making a show route
-- Practice making new/create routes
-- Practice adding static assets (CSS)
+- Set up some express servers for practice
+- make some get routes
+- use url/query parameters
 
 #### Prerequisites
 
-- Express Basics (Create/Read/Static Assets)
+- Nodejs
+- npm packages
+- Introduction to expressjs
+- Request/response/ how the internet works basics
+- Basic understanding of routing
+- JavaScript, HTML fundamentals
 
 ---
 
-## Deliverables
-
-You'll be creating an app that can let you
-- see a list of your income and expenditures
-- show you one income/expenditure item
-- create a new income/expenditure item
 
 ## Technical Requirements
-1. Must be able to run without syntax errors
-2. Must have index, show, create, new routes, using REST
-3. Must have basic MVC structure (more details below)
+1. Must be able run without syntax errors (ok if it breaks after the user tries to do something, though do try to comment on the code that isn't working)
+2. Must get functionality required for each section working
 
-## Submission Guidelines
 
-- Must be submitted no later than the start of the next class
+## Learning Objectives
+* Practice setting up express applications.
+* Practice creating custom routes.
+* Practice using parameters from a request.
+
+
+## Getting Started
+
+In the `homework` directory for today, create a Javascript file `server.js`. Write your answers inside this one js file.
+
+* `npm init`. You should receive a `package.json`.
+
+Install express. `npm i express`. Check your files.
+  - _Remember:_ If you have an older npm version below 5.0.0, you need to type `npm install express --save` instead! Refer back to your [notes](https://git.generalassemb.ly/Web-Development-Immersive-Remote/WDIR-Outrun/blob/master/unit_2/w04d05/instructor_notes/INTRO_TO_EXPRESS.md) if you need to be reminded of the differences between version 4 and 5  
+
+:elephant: _Hint_: You can check to make sure your installation was successful in one of the following places:
+
+- Your `package.json` file should have `express` listed in the dependencies.
+- You could also check in your `node_modules` folder to see an`express` folder.
+- Require `express` and set the `app`. (look back to the markdown from today if you need more help on how to do this).
+- Tell the server where to listen for requests (the port).
+
+## Greetings
+
+2. Make a route `'/greeting'` that sends a generic greeting to the screen like "Hello, stranger".
+
+3. Give the `greeting` route a param `/:name`
+
+4. When hitting the route, the page should display a message such as "Hello, <name>", or "What's up, `<name>`", or "`<name>`! It's so great to see you!" (ex. hitting `'/greeting/Jimmy-boy'` should display `Wow! Hello there, Jimmy-boy` on the page).
+
+&#x1F534; **Commit** <br>
+<hr>
+"Greeting express application created."
+<hr>
+
+## Tip Calculator
+
+2. Your app should have a route of `'/tip'` and it should expect *2 params*. One should be `total` and one should be `tipPercentage`.
+
+3. When hitting the route, the page should *display how much your tip will be* based on the total amount of the bill and the tip percentage. (ex. hitting `'/tip/100/20'` should display `20` on the page).
+
+&#x1F534; **Commit** <br>
+
+<hr>
+"Tip Calculator express application created."
+<hr>
+
+
+## Magic 8 Ball
+
+2. Create a route of `'/magic'` that should expect a phrase in the URL that ask the Magic 8 ball a question.
+
+3.  So if the user hits that route and asks a question of "Will I be a Millionaire" (ex. `'/magic/Will%20I%20Be%20A%20Millionaire'`) he should have return to him his question AND a random Magic 8 ball response (see the array below) on the  screen.
+
+4. We can't use spaces in the url, so we use `%20` to express a space in the url.
+
+5. So if the user hits that route and asks a question of "Will I be a Millionaire" he should get his question asked and a random Magic 8 ball quote on the  screen.
+- Send the magic 8 ball response back between html `<h1>` tags
+- Use this array of Magic 8 ball responses.....
+
+```
+["It is certain", "It is decidedly so", "Without a doubt", "Yes definitely","You may rely on it", "As I see it yes", "Most likely", "Outlook good","Yes", "Signs point to yes", "Reply hazy try again", "Ask again later","Better not tell you now", "Cannot predict now", "Concentrate and ask again","Don't count on it", "My reply is no", "My sources say no","Outlook not so good", "Very doubtful"]
+```
+
+&#x1F534; **Commit** <br>
+<hr>
+"Magic 8 Ball express application created."
+<hr>
+
+## Take one Down and Pass it Around
+
+Origins: WDI-DC Campus<br>
+
+Build an express application that enables users to count down the number
+of bottles of beer. Don't like beer? Pass around bottles of soda, kombucha, or milk etc.
+
+## Instructions
+
+- `mkdir pass-it-around`
+- `cd pass-it-around`
+- `npm init -y`
+- build a basic express server
+
+
+### Requirements
+
+- On the home page (`get "/"`), users should see:
+  - "99 Bottles of beer on the wall"
+  - a link that says "take one down, pass it around"
+  - this should link to `/98`, where the number represents the number of bottles left.
+- When a number is given in the url (`get "/:number_of_bottles"`), users should see:
+  - The number of bottles of beer on the wall (i.e. `98 Bottles of beer on the wall.`)
+  - a link to "take one down, pass it around", where the href is number of bottles in the parameter minus 1.
+- If there are 0 bottles left, do not show a link to "take one down"
+  - Add a link to start over, which directs the user back to the home page.
+
+#### Hints
+ - You should use an `anchor` tag with an `href` to link to the next 'page'
+
+#### Bonus
+
+- Have some more fun
+
+Update your page to be something like
+
+```
+99 little bugs in the code
+99 little bugs
+Take on down
+Patch it around
+127 bugs in the code
+```
+
+Make the bugs go down by one, but then have some sort of functionality where the bug count can `randomly` go up
+
+You have a lot of freedom to make it work how you want!
+
+## Hungry for more?
+
+### Fibonacci
+
+Back in your main app:
+
+1.  Add `Fibonnaci` as a comment in your application.
+
+2. Create a route 'fibonacci'
+
+3. This route will take one param, the number we will operate on.
+
+4. If the number param is not a [fibonacci number](https://en.wikipedia.org/wiki/Fibonacci_number), print out "I can tell this is not a fibonacci number."
+
+5. If the number is a Fibonacci number print out "Very good. It is Fibonacci."
+
+&#x1F534; **Commit** <br>
+<hr>
+"Fibonacci."
+<hr>
+
+### Super Bonus
+Continue to work on X-Files in the labs folder
+
+### Request
+
+Looking for something advanced that we haven't covered? How about getting your server to communicate with another server on the web. You will have to look through documentation to get this working.
+
+There are more modules than just `express`. Let's look at one called `request` that can make http requests of its own.
+
+#### request
+
+Use a module called `request` to make an http request to a third-party API.
+
+* Look on the [npmjs](https://www.npmjs.com/) website to find documentation for a module called `request`
+
+* Go to the [jservice.io](http://jservice.io/) website to find documentation on the jservice api endpoints. This API will send JSON as a response. If you go to `http://jservice.io/api/random` in your browser, you'll see some JSON.
+
+Something like this:
+
+![](https://i.imgur.com/n82vCvO.png)
+
+* Use `request` within node to make a request to `jservice.io` and get a random trivia question and log the JSON in terminal.
+
+* Use `express` to make a route that will display a random trivia question and its answer (only the question and the answer) in the browser. _Hint_ is the JSON really a Javascript object? Or is it a string?
+
+* Make a route that will deliver jservice results for one of either the clues, random, categories, category API endpoints, depending on user input.
+
+&#x1F534; **Commit** <br>
+<hr>
+"Request"
+<hr>
+
+### HackerRank
+
+Sign up for [HackerRank](https://www.hackerrank.com/). Solve a few of the problems (this will help get you prepared for interviews! A lot of companies use this site for pre-screening interviews.). Some companies use hackarrank as part of an interview process, so getting familiar with the interface can be a good move
+
 
 ---
 
-# Getting Started
-
-## Data
-You are provided a `budget.js` file with data for you to use to populate your index and show routes
-
-## Routes
-- Index
-  - GET `/budgets`
-- Show
-  - GET `/budgets/:index`
-- New
-  - GET `/budgets/new`
-- Create
-  - POST `/budgets`
-
-## MVC
-Models, Views, Controller
-
-We only have one model, so it may seem all these folders are overkill. As we start building with more complexity these folders will gain utility
-
-- Your app should follow the MVC format
-- Models
-  - `budget.js` - the data we provided
-- Controllers
-  -  since we just have one set of routes, we'll include them in our `server.js` stay tuned for lessons that'll teach us how to organize our code when we have more sets of routes
-- Views
-  - your EJS files go in here
-- Public
-  - your css file(s) go(es) here
-    - recommended to go to try a new css framework:<br>
-     http://getskeleton.com/
-    - download the `normalize.css` and `skeleton.css` files and add them to your public directory (or use the CDNs:
-    <br> `https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css` and `https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css` - thanks for the Tip Sam Whitleton!)
-    - link them in your ejs files:
-    ```html
-    <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="/skeleton.css">
-    ```
-    In order to immediately modernize your HTML
-
-At the root of your project:
-- `server.js`
-- `package.json` created with `npm init`
-- `.gitignore` - create it and add `node_modules`, you don't need it  yet, but it is good practice to use this
-
-<details><summary>File Structure</summary>
-
-![file structure example](https://i.imgur.com/vIbW1fN.png)
-
-</details>
-
-### Commits
-The order doesn't matter, but this will help you check your progress of completing this homework:
-##### commit at least each time you get a route and/or view working
-
-#### Getting Started
-
-- server is working and displays a plain `res.send` index page ` with some text like 'hello world'
-- Added and configured npm packages `express`, `ejs`
-- configured `express.static`
-
-- created index.ejs
-  - html boiler plate
-  - link `normalize.css` and `skeleton.css`
-  - div with the class `container`
-  - `h1` with the text Budgtr ALL (or similar text)
-
-Expected appearance with `normalize.css` and `skeleton.css` are properly linked:
-
-![just an h1 inside a div with a class of container](https://i.imgur.com/CygNXJZ.png)
-
-<hr>
-
-#### Index
-- Set your` models/budget.js` data to a variable named `Budget`
-- Display your data on your index page as a `<table>`
- - each income/expenditure should be a `<tr>`
- - each piece of data should be its own table cell `<td>`
- - the `name` should be wrapped in an `<a>` (anchor) tag, that goes nowhere for the moment, but will eventually link to the show page for that item
-
-Expected Apperance:
-
-![index.ejs populated with data](https://i.imgur.com/Hf6TkJU.png)
-
-<hr>
+*Copyright 2018, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*
 
 
-#### Show
-- A show route and `show.ejs`
-- a link from `index.ejs` item name to its show page
-  - html boilerplate
-  - remember to add your css links (copy from your `index.ejs`)
-  - a `<div>` with the class of `container`
-  - an `<h1>` with the name of your item
-  - a `<button>` that takes you back to the `index.ejs` page
-  - the rest of the details of the item
 
-Sample Apperance:
-
-![show route](https://i.imgur.com/dVBZicJ.png)
-
-**Hint:** the button should already be styled if your `normalize.css` and `skeleton.css` are linked properly
-
-Feel free to organize the rest of this page any way you like. Hold off on styling this more until the HFM section - just use the base styles provided by our already linked css files
-
-<hr>
-
-#### New
-- configured `body-parser`
-- Add a button in your `index.ejs` that links to a new route that displays `new.ejs`
-- The `new.ejs` should contain
- - html boilerplate
- - links to your css files
- - a `div` with the class container
- - an `h1` with a descriptive title
- - a form, with the appropriate action and method
- - an input field for
-    - date
-     - name
-    - amount
-    - from
-    - submit
-   - tags (bonus)
-- Styling forms are a pain, keep it simple for now
-
-**Hint**: use the attribute `placeholder` in the input field to see a placeholder value, rather than putting a label of the input field outside. Here is an example:
-
-![placeholder example](https://i.imgur.com/KZ0DSKn.png)
-
-**GOTCHA** - make sure this get route is above your URL parameters route
-
-![filled out form](https://i.imgur.com/3CA6L5F.png)
-
-<hr>
-
-#### New
-- A new route that is a post route
-- first just console.log the `req.body`
-- once the `req.body` is what you'd an expect (an object with keys that match our data in our `models/budget.js` and values that were entered in your form) `.push()` the `req.body` to your `Budget`
-- then redirect to the index
-- when you redirect to your index page, your new item should appear
-
-See new item at the bottom:
-
-![new item in list](https://i.imgur.com/0OTjWiw.png)
-
-Show page should also render properly
-
-![new item show page](https://i.imgur.com/r6CvxlW.png)
-
-### Hints
-
-
-<details><summary>Server.js</summary>
-
-![server.js example](https://i.imgur.com/uSYHYzp.png)
-
-</details>
-
-## Innovation Time!
-
-Remember, this is just JavaScript, so you can write as much JS logic as you want to make the app more useful beyond just showing the data as is. Be sure you solve this on your own.
-
-- Add a variable 'bankAccount'
-    - display it at the top of the index.ejs
-    - have this value update based on each item
-    - if the value is less than 0, change the background to red
-    - if the value is greater than 1000 change the background to blue or green
-
-- Tips
-    - pseudocode on your own, figure out YOUR way of solving it
-    - have a code graveyard
-    - talk it through with the TA
-    - link to helpful articles on stack overflow/elsewhere
-    - collaborate - have a friend help you solve it your way or help a friend solve it their way
-
-<hr>
+##### Previous headers:
+###### Express Practice
 
 ---
-
-## Hungry for More
-
-<details><summary>Click to see HFM options</summary><p>
-   
-   Feel free to choose what you want and if you want to implement something differently than the suggestion, go for it! It is hungry for more time!
-
-
-- Go back to the afternoon lab and use cURL
-- render the tags as list items in an undordered list
-- input the tags, and add them to the tags array, figure out how to properly add multiple tags
-- override the amount input so that it defaults to a negative number
-- add logic to check whether the item is an expenditure or income (use two different fields? a check box? separate buttons? The choice is yours) and then input the amount as negative or positive based on the user's input
-
-- style your app, add a `main.css` that adds your personal style on top of normalize and skeleton
-
-**SUPER BONUS**
-- try to store data in [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-
-- If you implemented tags, sort/filter your list by tags (no hints! There are many ways to solve this!)
-
-
-</p></details>
+Title: JS Express & Routes Practice<br>
+Type: Homework<br>
+Creator: lost in the mists of time<br>
+Heavily adapted by: Kristyn Bryan, Thom Page, Jerrica Bobadilla, Karolin Rafalski<br>
+Competencies: Javascript, Express, Routes, Node<br>
+Prerequisites: Javascript <br>
 
 ---
-
-*Copyright 2019, General Assembly Space. Licensed under [CC-BY-NC-SA, 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)*

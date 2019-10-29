@@ -1,5 +1,5 @@
 {
-  "name": "budgtr",
+  "name": "homework",
   "version": "1.0.0",
   "description": "[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)",
   "main": "server.js",
@@ -10,8 +10,6 @@
   "author": "Veronica Ramirez",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.7.1",
     "express": "^4.17.1"
-  },
-  "devDependencies": {}
+  }
 }
