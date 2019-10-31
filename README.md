@@ -7,6 +7,7 @@ These are my own solutions to assignments in unit_1 and unit_2
  * [Flowerbox](https://veroelaine.github.io/VeroElaine-own-solutions/Flowerbox/)
  * [Fruits]()
  * [Budget]()
+ * [Lord of the Rings](https://veroelaine.github.io/VeroElaine-own-solutions/Lord_of_the_Rings/) utilzes jQuery, JavaScript, HTML, DOM
  * [rock_paper_scissors]()
  * [pass_it_around]()
  * [madlibs]()
