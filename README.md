@@ -12,7 +12,8 @@ HTML/CSS, and Flexbox
 
 ## What I utilize per app
  * gitPub - Utilizes JavaScript, Express, Node, and EJS
- * Fruits -
+ * Fruits - JavaScript, Express/Node, Mong/Mongoose
+ * FruitsUnit2 - JavaScript, Express / Node, Mongo / Mongoose, Express Session, Bcrypt
  * Budget - Utilizes Express Basics (Create/Read/Static Assets)
  * rock_paper_scissors -
  * pass_it_around -
