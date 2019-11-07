@@ -6,6 +6,7 @@ These are my own solutions to assignments in unit_1 and unit_2
  * [Hogwarts](https://veroelaine.github.io/VeroElaine-own-solutions/Hogwarts/) - Utilizes JavaScript fundamentals, jQuery
 HTML/CSS, and Flexbox
  * [Flowerbox](https://veroelaine.github.io/VeroElaine-own-solutions/Flowerbox/)
+ * [Campervan Solar-Setup](https://campervan-solar-setup.herokuapp.com/) - Utilizes CRUD, Node.js, Mongoose, Express and EJS
  * [Lord of the Rings](https://veroelaine.github.io/VeroElaine-own-solutions/Lord_of_the_Rings/) - Utilizes jQuery, JavaScript, HTML, and DOM
  * [To_Do](https://veroelaine.github.io/VeroElaine-own-solutions/To_Do_App/)
 
